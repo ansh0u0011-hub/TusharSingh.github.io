@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar Singh Sengar | Data Analytics & Automation Expert</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background-color: #0B1120; pointer-events: none;"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand highlight">Tushar S.</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <header id="hero" class="hero container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+                <div class="profile-region">
+                    <div class="photo-wrapper" data-aos="zoom-in">
+                        <img src="https://lh3.googleusercontent.com/d/1kyLrfJbkOnOQ9XTqeqhTAOJH6fBR0OuG" alt="Tushar Singh Sengar" class="profile-photo">
+                        <span class="status-tag highlight">Open to Global Projects</span>
+                    </div>
+                    <div class="profile-text">
+                        <h1>Hi, I’m <span class="highlight">Tushar Singh Sengar</span></h1>
+                        <h2>Data Analytics & Business Process Automation Specialist</h2>
+                        <p>Transforming Complex Data into Actionable Insights & Automating Workflows to Save You 20+ Hours/Week.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-resume-info">
+                    <p>📍 Delhi, India | 💼 MIS Executive</p>
+                    <div class="hero-actions">
+                        <a href="https://docs.google.com/document/d/1TTAcnroQXYOM7hyR1FpP98ikjGrSn_OYCUbGX1Cz-iQ/edit?usp=sharing" target="_blank" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Talk to Me</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="skills" class="skills container" data-aos="fade-up">
+            <h3>Core Technical Expertise</h3>
+            <div class="skill-tags">
+                <span><i class="fa-solid fa-code"></i> Google Apps Script</span>
+                <span><i class="fa-solid fa-chart-pie"></i> Data Analytics</span>
+                <span><i class="fa-solid fa-chart-line"></i> Power BI & Reporting</span>
+                <span><i class="fa-solid fa-file-excel"></i> Advanced Excel & VBA</span>
+                <span><i class="fa-solid fa-database"></i> SQL Database</span>
+                <span><i class="fa-solid fa-boxes-stacked"></i> Inventory Management Systems</span>
+            </div>
+        </section>
+
+        <section id="projects" class="projects container" data-aos="fade-up">
+            <h3>My Work & Impact</h3>
+            <div id="project-container" class="project-grid">
+                <p id="loading" style="text-align: center; color: #38bdf8; font-size: 1.2rem;">Loading automated projects from database... Please wait.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact container" data-aos="fade-up">
+            <h3>Get in Touch</h3>
+            <p>Looking to automate workflows or get expert insights from your data? Drop me a message.</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Message</button>
+                <p id="form-status"></p>
+            </form>
+        </section>
+
+        <footer class="footer container">
+            <p>© 2026 Tushar Singh Sengar | Powering Decisions with Data</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({ once: true }); 
+
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#38bdf8" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#38bdf8", "opacity": 0.4, "width": 1.5 },
+                    "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 180, "line_linked": { "opacity": 1 } },
+                        "push": { "particles_nb": 3 }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

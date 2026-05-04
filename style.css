@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B1120;
+    color: #e2e8f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Layering Fixes */
+.navbar, .content-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #0B1120; /* Color ko fully solid dark kar diya hai */
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ye guarantee dega ki patti hamesha sabse aage rahe */
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-region {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.photo-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #1e293b;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    background-color: #0f172a;
+}
+
+.status-tag {
+    position: absolute;
+    bottom: -10px;
+    background-color: #0F172A;
+    color: #38bdf8;
+    font-size: 0.75rem;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #38bdf8;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.profile-text {
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #38bdf8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+}
+
+.contact-resume-info p {
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+}
+
+.btn-outline {
+    background: rgba(15, 23, 42, 0.6);
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    backdrop-filter: blur(5px);
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.skills h3, .projects h3, .contact h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #f8fafc;
+    text-align: center;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-tags span {
+    background-color: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #f1f5f9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.skill-tags span i {
+    color: #38bdf8;
+}
+
+.skill-tags span:hover {
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: rgba(15, 23, 42, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(30, 41, 59, 0.5);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.category-tag {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    color: #f8fafc;
+    margin: 15px 0 10px 0;
+}
+
+.project-impact {
+    color: #10b981;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.project-desc {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.tools-used {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.contact {
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 6px;
+    color: #f1f5f9;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #38bdf8;
+    outline: none;
+    background-color: rgba(30, 41, 59, 0.9);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(51, 65, 85, 0.3);
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 40px;
+}
